@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import UserProfile from './UserProfile';
+import './styles.css';  // Importa il file CSS
 
-function App() {
+const App = () => {
+  // Sostituisci con un ID utente che esiste nel tuo database
+  const userId = '1'; // Cambia questo con un userId reale presente nel tuo database
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UserProfile userId={userId} />
     </div>
   );
-}
+};
 
 export default App;
